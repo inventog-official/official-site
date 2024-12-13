@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .clip-50 {
+        clip-path: circle(50% at 50% 50%);
+    }
+    .clip-0 {
+        clip-path: circle(0% at 50% 50%);
+    }
+}
+html,
+body {
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit browsers like Chrome, Safari */
+}
+.scroll-container {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
