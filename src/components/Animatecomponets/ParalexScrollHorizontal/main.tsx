@@ -1,5 +1,5 @@
 import { useScroll, useTransform, motion } from "framer-motion";
-import { useRef, useEffect, ReactNode } from "react";
+import { useRef, ReactNode } from "react";
 
 interface ParallexHorizontalScrollProps {
   children: ReactNode[]; // Accept an array of ReactNode

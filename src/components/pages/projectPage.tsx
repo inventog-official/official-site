@@ -1,9 +1,6 @@
-import React from "react";
 import ImageCard from "../Animatecomponets/ImageScreenAnimation/main";
-import AnimatedText from "../Animatecomponets/AnimateText/main";
 import SlideUp from "../Animatecomponets/SlideUpTextAnimation/main";
 import { BsArrowDown } from "react-icons/bs";
-import GetInTouch from "./getInTouch";
 
 const ProjectPage = () => {
   const imageData = [
