@@ -12,25 +12,25 @@ const TeamPage = () => {
       gender: "male",
       role: "Frontend Developer",
       color: "bg-white", // Custom color
-      profileImage: "/team/fe.svg", // Replace with actual image URL
+      profileImage: "/fe.svg", // Replace with actual image URL
     },
     {
       gender: "male",
       role: "Backend Developer",
       color: "bg-white", // Custom color
-      profileImage: "/team/be.svg", // Replace with actual image URL
+      profileImage: "/be.svg", // Replace with actual image URL
     },
     {
       gender: "male",
       role: "UI/UX Designer",
       color: "bg-white", // Custom color
-      profileImage: "/team/uiux.svg", // Replace with actual image URL
+      profileImage: "/uiux.svg", // Replace with actual image URL
     },
     {
       gender: "male",
       role: "DevOps Engineer",
       color: "bg-white", // Custom color
-      profileImage: "/team/devops.svg", // Replace with actual image URL
+      profileImage: "/devops.svg", // Replace with actual image URL
     },
     // {
     //   gender: "male",
@@ -42,13 +42,13 @@ const TeamPage = () => {
       gender: "male",
       role: "Product Manager",
       color: "bg-white", // Custom color
-      profileImage: "/team/pm.svg", // Replace with actual image URL
+      profileImage: "/pm.svg", // Replace with actual image URL
     },
     {
       gender: "male",
       role: "QA Engineer",
       color: "bg-white", // Custom color
-      profileImage: "/team/qa.svg", // Replace with actual image URL
+      profileImage: "/qa.svg", // Replace with actual image URL
     },
     // {
     //   gender: "male",
@@ -80,7 +80,7 @@ const TeamPage = () => {
 
       <div className="flex flex-col  xl:flex-row  items-start text-left px-3 xl:px-10 gap-2 h-full xl:h-screen w-full">
         <div className="w-full  h-full p-16  flex justify-center items-center">
-          <img src="/team/team.png" className="animate-zoomIn" />
+          <img src="/team.png" className="animate-zoomIn" />
         </div>
         <div className="w-full flex justify-center h-full gap-2 flex-col px-8 xl:px-14">
           <button className="border border-black w-full xl:w-[30%] rounded-full px-4 py-2 ">
