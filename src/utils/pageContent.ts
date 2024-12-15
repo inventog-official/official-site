@@ -7,7 +7,7 @@ export const wholePageContent ={
     },
     about:{
         heading:"ABOUT US",
-        content:" At WEDATZ, we're a dedicated team focused on digital development and building creative solutions. Our passion lies in working closely with our partners and customers to develop valuable digital products tailored to their needs.",
+        content:" At INVENTOG, we're a dedicated team focused on digital development and building creative solutions. Our passion lies in working closely with our partners and customers to develop valuable digital products tailored to their needs.",
         buttonText:"Find out more"
     },
     work:{
@@ -25,7 +25,7 @@ export const wholePageContent ={
               imageUrl:"https://bbbzdlyncfcnmzxxaubm.supabase.co/storage/v1/object/gms-api/public/banner-img/3f49feb424a78b862cc3.webp"
             },
             {
-              initialText: "WEDATZ",
+              initialText: "Inventog",
               originalContent: {
                 content:
                   "Our passion lies in working closely with our partners and customers to develop valuable digital products tailored to their needs.",

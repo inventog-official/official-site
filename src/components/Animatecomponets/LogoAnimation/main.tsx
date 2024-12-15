@@ -27,7 +27,7 @@ const LogoAnimation = ({ onComplete }:{onComplete:() =>void}) => {
         id="xyz"
         className="absolute top-[50px] left-[85px] md:left-[115px] text-[40px] font-bold text-white animate-textreveal whitespace-nowrap overflow-hidden"
       >
-        WEDATZ
+    Inventog
       </p>
     </div>
   </div>

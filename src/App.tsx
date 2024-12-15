@@ -15,6 +15,7 @@ import useScrollBackgroundColor from "./hook/useScrollBgColor";
 import ProcessPage from "./components/pages/processPage";
 import TeamPage from "./components/pages/teamPage";
 import ContactPage from "./components/pages/contactPage";
+import ProjectPage from "./components/pages/projectPage";
 
 function App() {
   const [showContent, setShowContent] = useState(false);
@@ -77,7 +78,10 @@ function App() {
                 />
                 <Route
                   path="/projects"
-                  element={<div className=" bg-black"></div>}
+                  element={<div className=" bg-white">
+                    <ProjectPage/>
+                    <GetInTouch/>
+                  </div>}
                 />
                 <Route
                   path="/process"

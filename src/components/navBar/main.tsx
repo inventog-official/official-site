@@ -18,7 +18,7 @@ const NavBar:React.FC<{bgColor:string,bgColorForMenu:string}> = ({bgColor,bgColo
             setActive()
             navigate('/')
           }} className=" h-16 w-16 cursor-pointer flex shadow-lg justify-center items-center text-white text-4xl font-bold font-serif  rounded-full uppercase bg-black ">
-            w
+            I
           </span>
        <MenuComponent bgColor_={bgColorForMenu}/>
         </div>
