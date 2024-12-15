@@ -19,7 +19,7 @@ const ParallexHorizontalScroll: React.FC<ParallexHorizontalScrollProps> = ({
   return (
     <section ref={targetRef} className="md:h-[400vh] flex flex-col px-10">
     <div className="sticky top-0  h-screen justify-center items-center  xl:flex xl:visible lg:flex lg:visible  hidden overflow-hidden">
-      <motion.div style={{ x ,width:1400} } className="flex gap-10">
+      <motion.div style={{ x ,width:1200} } className="flex gap-10">
          {children.map((child, index) => (
             <div key={index} className="flex-shrink-0">
               {child}

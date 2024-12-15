@@ -59,6 +59,14 @@ export const wholePageContent ={
             },
           ]
     },
+    team:{
+      headingText1:"Improve your digital",
+      headingText2:"presence with our team",
+      headingText3:"dedicated",
+      heading:"OUR MISSION",
+      description:" We believe that every brand has a unique story to tell, and we strive to bring that story to life through innovative solutions. From concept to implementation, we work hand-in-hand with our clients to develop innovative digital products and create a compelling online presence that sets them apart from the competition."
+    },
+
     themeColor:{
         primary:"#3559E0"
     }

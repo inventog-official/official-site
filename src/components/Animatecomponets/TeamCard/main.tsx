@@ -17,8 +17,8 @@ const TeamCard: React.FC<TeamCardProps> = ({
 
   return (
     <div
-      className={`product-Team w-[300px] rounded-md shadow-xl overflow-hidden z-[100] relative cursor-pointer snap-start shrink- py-20 px-6 ${
-        color ? color : (isMale ? "bg-primary" : "bg-pink-500")
+      className={`product-Team w-[300px] hover:shadow-primary/30 group rounded-md shadow-xl overflow-hidden z-[100] relative cursor-pointer snap-start shrink- py-20 px-6 ${
+        color ? color : isMale ? "bg-primary" : "bg-pink-500"
       } flex flex-col items-center justify-center gap-3 transition-all duration-300 group`}
     >
       <div
@@ -34,29 +34,42 @@ const TeamCard: React.FC<TeamCardProps> = ({
             strokeWidth={1}
             fill="none"
             viewBox="0 0 24 24"
-            className="fill-gray-300 rotate-[24deg]"
+            className="rotate-[24deg]"
             height={200}
             width={200}
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M12 2L2 7h20L12 2zM2 9l10 5 10-5v10H2V9z" />
+            <defs>
+              <linearGradient id="blueToGray" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#3559E0" stopOpacity={1} />
+                <stop offset="100%" stopColor="#F4EAE6" stopOpacity={1} />
+              </linearGradient>
+            </defs>
+            <path
+              d="M12 2L2 7h20L12 2zM2 9l10 5 10-5v10H2V9z"
+              fill="url(#blueToGray)"
+            />
           </svg>
         </div>
       </div>
 
       <div
         className={`absolute rounded-full ${
-          isMale ? "bg-blue-700" : "bg-pink-700"
+          isMale ? "bg-primary" : "bg-pink-700"
         } z-20 left-1/2 top-[44%] h-[110%] w-[110%] -translate-x-1/2 group-hover:top-[58%] transition-all duration-300`}
       />
 
       <div className="para uppercase text-center leading-none z-40">
-        <p className="text-white font-semibold text-xs font-serif">Best</p>
-        <p className="font-bold text-xl tracking-wider text-white">{role}</p>
+        <p className="text-black font-semibold text-xs font-serif">Best</p>
+        <p className="font-bold text-xl tracking-wider text-black">{role}</p>
       </div>
 
-      <div className="img w-[180px] aspect-square bg-gray-100 z-40 rounded-md">
-        <img src={profileImage} alt={`${role} profile`} className="w-full h-full object-cover rounded-md" />
+      <div className="img w-[80%] p-2 shadow-lg group-hover:animate-floating  aspect-square bg-gray-100 z-40 rounded-md">
+        <img
+          src={profileImage}
+          alt={`${role} profile`}
+          className="w-full h-full  object-cover rounded-md"
+        />
       </div>
 
       {/* Optional contact information */}
@@ -92,4 +105,4 @@ const TeamCard: React.FC<TeamCardProps> = ({
   );
 };
 
-export default TeamCard; 
+export default TeamCard;

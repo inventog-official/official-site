@@ -1,3 +1,4 @@
+import { wholePageContent } from "../../utils/pageContent";
 import AnimatedText from "../Animatecomponets/AnimateText/main";
 import ParallexHorizontalScroll from "../Animatecomponets/ParalexScrollHorizontal/main";
 import SlideUp from "../Animatecomponets/SlideUpTextAnimation/main";
@@ -10,51 +11,51 @@ const TeamPage = () => {
     {
       gender: "male",
       role: "Frontend Developer",
-      color: "bg-blue-500", // Custom color
-      profileImage: "https://example.com/profile1.jpg", // Replace with actual image URL
+      color: "bg-white", // Custom color
+      profileImage: "/team/fe.svg", // Replace with actual image URL
     },
     {
       gender: "male",
       role: "Backend Developer",
-      color: "bg-blue-500", // Custom color
-      profileImage: "https://example.com/profile2.jpg", // Replace with actual image URL
+      color: "bg-white", // Custom color
+      profileImage: "/team/be.svg", // Replace with actual image URL
     },
     {
       gender: "male",
       role: "UI/UX Designer",
-      color: "bg-blue-500", // Custom color
-      profileImage: "https://example.com/profile3.jpg", // Replace with actual image URL
+      color: "bg-white", // Custom color
+      profileImage: "/team/uiux.svg", // Replace with actual image URL
     },
     {
       gender: "male",
       role: "DevOps Engineer",
-      color: "bg-blue-500", // Custom color
-      profileImage: "https://example.com/profile4.jpg", // Replace with actual image URL
+      color: "bg-white", // Custom color
+      profileImage: "/team/devops.svg", // Replace with actual image URL
     },
-    {
-      gender: "male",
-      role: "Software Architect",
-      color: "bg-blue-500", // Custom color
-      profileImage: "https://example.com/profile5.jpg", // Replace with actual image URL
-    },
+    // {
+    //   gender: "male",
+    //   role: "Software Architect",
+    //   color: "bg-white", // Custom color
+    //   profileImage: "https://example.com/profile5.jpg", // Replace with actual image URL
+    // },
     {
       gender: "male",
       role: "Product Manager",
-      color: "bg-blue-500", // Custom color
-      profileImage: "https://example.com/profile6.jpg", // Replace with actual image URL
+      color: "bg-white", // Custom color
+      profileImage: "/team/pm.svg", // Replace with actual image URL
     },
     {
       gender: "male",
       role: "QA Engineer",
-      color: "bg-blue-500", // Custom color
-      profileImage: "https://example.com/profile7.jpg", // Replace with actual image URL
+      color: "bg-white", // Custom color
+      profileImage: "/team/qa.svg", // Replace with actual image URL
     },
-    {
-      gender: "male",
-      role: "Data Scientist",
-      color: "bg-blue-500", // Custom color
-      profileImage: "https://example.com/profile8.jpg", // Replace with actual image URL
-    },
+    // {
+    //   gender: "male",
+    //   role: "Data Scientist",
+    //   color: "bg-white", // Custom color
+    //   profileImage: "https://example.com/profile8.jpg", // Replace with actual image URL
+    // },
   ];
   return (
     <div className="h-full">
@@ -62,15 +63,15 @@ const TeamPage = () => {
         <div className="w-full    xl:h-full text-black  flex justify-end items-start flex-col gap-0 px-5  xl:px-32 ">
           <SlideUp
             className="xl:text-[80px]  text-[40px] font-[800] animate-slideIn   "
-            text={"Improve your digital"}
+            text={wholePageContent.team.headingText1}
           />
           <SlideUp
             className="xl:text-[80px] text-[40px] font-[800] animate-slideIn    "
-            text={"presence with a team of"}
+            text={wholePageContent.team.headingText2}
           />
           <span className="flex gap-3">
             <AnimatedText
-              text="dedicated"
+              text={wholePageContent.team.headingText3}
               className="xl:text-[80px]  animate-slideIn  justify-start items-start text-[40px] font-[800]   "
             />
           </span>
@@ -83,15 +84,10 @@ const TeamPage = () => {
         </div>
         <div className="w-full flex justify-center h-full gap-2 flex-col px-8 xl:px-14">
           <button className="border border-black w-full xl:w-[30%] rounded-full px-4 py-2 ">
-            OUR MISSION
+           {wholePageContent.team.heading}
           </button>
           <div className="text-left text-lg xl:text-3xl font-bold max-w-lg leading-relaxed">
-            We believe that every brand has a unique story to tell, and we
-            strive to bring that story to life through innovative solutions.
-            From concept to implementation, we work hand-in-hand with our
-            clients to develop innovative digital products and create a
-            compelling online presence that sets them apart from the
-            competition.
+           {wholePageContent.team.description}
           </div>
         </div>
       </div>
