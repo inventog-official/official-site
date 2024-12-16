@@ -81,7 +81,7 @@ const TeamPage = () => {
 
       <div className="flex flex-col  xl:flex-row  items-start text-left px-3 xl:px-10 gap-2 h-full xl:h-screen w-full">
         <div className="w-full  h-full p-16  flex justify-center items-center">
-          <img src="/teamImage.png" className="animate-zoomIn" />
+          <img src="https://i.imghippo.com/files/gQX3238Xyg.png" className="animate-zoomIn" />
         </div>
         <div className="w-full flex justify-center h-full gap-2 flex-col px-8 xl:px-14">
           <button className="border border-black w-full xl:w-[30%] rounded-full px-4 py-2 ">
