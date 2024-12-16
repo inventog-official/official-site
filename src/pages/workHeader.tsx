@@ -1,9 +1,11 @@
-import { wholePageContent } from '../../utils/pageContent'
-import Button2 from '../common/button2'
-import useOnScreen from '../../hook/useOnScreen';
-import SlideUp from '../Animatecomponets/SlideUpTextAnimation/main';
+import SlideUp from "../components/Animatecomponets/SlideUpTextAnimation/main";
+import Button2 from "../components/common/button2";
+import useOnScreen from "../hook/useOnScreen";
+import { wholePageContent } from "../utils/pageContent";
 
-const WorkHeader = () => {
+;
+
+export const WorkHeader = () => {
     const [aboutRef, isVisible] = useOnScreen({ threshold: 0.1 });
 
   return (
@@ -42,4 +44,3 @@ const WorkHeader = () => {
   )
 }
 
-export default WorkHeader

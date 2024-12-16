@@ -1,10 +1,11 @@
-import { useInView } from "react-intersection-observer";
-import SlideUp from "../Animatecomponets/SlideUpTextAnimation/main";
-import Button3 from "../common/button3";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
-import EmailLink from "../Animatecomponets/EmailLink/main";
+import EmailLink from "../components/Animatecomponets/EmailLink/main";
+import SlideUp from "../components/Animatecomponets/SlideUpTextAnimation/main";
+import Button3 from "../components/common/button3";
+import { useInView } from "react-intersection-observer";
 
-const GetInTouch = () => {
+
+export const GetInTouch = () => {
   const { ref, inView } = useInView({
     threshold: 0.3, // Adjust as needed
     triggerOnce: true, // Only trigger once
@@ -12,7 +13,7 @@ const GetInTouch = () => {
   return (
     <div ref={ref} id={"getInTouch"}>
  
-      <div className="h-screen bg-primary justify-center items-center flex xl:px-10 px-5 ">
+      <div className="xl:h-screen h-[70vh]  bg-primary justify-center items-center flex xl:px-10 px-5 ">
         <div className="flex flex-col md:flex-row gap-10  items-center justify-between w-full">
           <div className="text-black w-full px-5 ">
             <h2 className="xl:text-[120px] text-[50px] font-bold">
@@ -70,4 +71,3 @@ const GetInTouch = () => {
   );
 };
 
-export default GetInTouch;

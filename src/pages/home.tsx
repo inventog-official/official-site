@@ -1,10 +1,11 @@
-import  { useEffect, useState } from 'react';
-import { wholePageContent } from '../../utils/pageContent';
-import ColosseumComponent from '../imageCarousel/main';
-import CircleAnimation from '../Animatecomponets/splashSCcreen/main';
-import TextAnimation from '../Animatecomponets/textAnimation/main';
+import { useState, useEffect } from "react";
+import CircleAnimation from "../components/Animatecomponets/splashSCcreen/main";
+import TextAnimation from "../components/Animatecomponets/textAnimation/main";
+import ColosseumComponent from "../components/imageCarousel/main";
+import { wholePageContent } from "../utils/pageContent";
 
-const Home = () => {
+
+export const Home = () => {
     const [showContent, setShowContent] = useState(false);
 
     useEffect(() => {
@@ -43,4 +44,3 @@ const Home = () => {
     );
 }
 
-export default Home;

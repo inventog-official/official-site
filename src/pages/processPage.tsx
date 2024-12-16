@@ -1,8 +1,9 @@
-import AnimatedText from "../Animatecomponets/AnimateText/main";
-import SlideUp from "../Animatecomponets/SlideUpTextAnimation/main";
-import StepProgressAnimation from "../Animatecomponets/stepAnimation/main";
+import AnimatedText from "../components/Animatecomponets/AnimateText/main";
+import SlideUp from "../components/Animatecomponets/SlideUpTextAnimation/main";
+import StepProgressAnimation from "../components/Animatecomponets/stepAnimation/main";
 
-const ProcessPage = () => {
+
+export const ProcessPage = () => {
   return (
     <div className="flex justify-center flex-col  items-center h-full  pt-32 xl:pt-0   px-5  xl:px-32 ">
       <div className="w-full    xl:h-screen text-black  flex justify-end items-start flex-col gap-0  ">
@@ -70,4 +71,3 @@ const ProcessPage = () => {
   );
 };
 
-export default ProcessPage;

@@ -1,13 +1,14 @@
 import { useState } from "react";
-import ScrollGapAnimation from "../Animatecomponets/ScrollGapAnimation/main";
-import ScrollImage from "../Animatecomponets/ScrollImageAnimation/main";
-import ExpandableContent from "../Animatecomponets/ExpandableContent/main";
-import { wholePageContent } from "../../utils/pageContent";
-import HorizontalScroll from "../Animatecomponets/HorizontalScrollAnimation/main";
-import Button2 from "../common/button2";
-import { useInView } from 'react-intersection-observer';
 
-const Work = () => {
+import { useInView } from 'react-intersection-observer';
+import ExpandableContent from "../components/Animatecomponets/ExpandableContent/main";
+import HorizontalScroll from "../components/Animatecomponets/HorizontalScrollAnimation/main";
+import ScrollGapAnimation from "../components/Animatecomponets/ScrollGapAnimation/main";
+import ScrollImage from "../components/Animatecomponets/ScrollImageAnimation/main";
+import Button2 from "../components/common/button2";
+import { wholePageContent } from "../utils/pageContent";
+
+export const Work = () => {
   const [imageDetails, setImageDetails] = useState({
     url: wholePageContent.work.projectsData[0].imageUrl,
     text: wholePageContent.work.projectsData[0].initialText,
@@ -138,4 +139,3 @@ const Work = () => {
   );
 };
 
-export default Work;

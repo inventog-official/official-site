@@ -1,12 +1,13 @@
-import { wholePageContent } from "../../utils/pageContent";
-import AnimatedText from "../Animatecomponets/AnimateText/main";
-import ParallexHorizontalScroll from "../Animatecomponets/ParalexScrollHorizontal/main";
-import SlideUp from "../Animatecomponets/SlideUpTextAnimation/main";
-import TeamCard from "../Animatecomponets/TeamCard/main";
-import {BeSvg, DeVops, FeSvg, PmSvg, QaSvg, UiUxSvg} from "../common/Svg/Team/index";
-import GetInTouch from "./getInTouch";
 
-const TeamPage = () => {
+import AnimatedText from "../components/Animatecomponets/AnimateText/main";
+import ParallexHorizontalScroll from "../components/Animatecomponets/ParalexScrollHorizontal/main";
+import SlideUp from "../components/Animatecomponets/SlideUpTextAnimation/main";
+import TeamCard from "../components/Animatecomponets/TeamCard/main";
+import { FeSvg, BeSvg, UiUxSvg, DeVops, PmSvg, QaSvg } from "../components/common/Svg/Team";
+import { wholePageContent } from "../utils/pageContent";
+import {GetInTouch} from "./getInTouch";
+
+export const TeamPage = () => {
 
   const teamMembers = [
     {
@@ -108,4 +109,3 @@ const TeamPage = () => {
   );
 };
 
-export default TeamPage;

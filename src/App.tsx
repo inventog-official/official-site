@@ -1,21 +1,12 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./components/pages/home";
 import NavBar from "./components/navBar/main";
 import CursorFollower from "./components/CurssorFollower/main";
 import LogoAnimation from "./components/Animatecomponets/LogoAnimation/main";
 import AnimatedPage from "./components/Animatecomponets/AnimatePage/main";
 import useCounterStore from "./store/animateScreen";
-import About from "./components/pages/about";
-import Work from "./components/pages/work";
-import ProcessAndApproach from "./components/pages/process&approch";
-import GetInTouch from "./components/pages/getInTouch";
-import WorkHeader from "./components/pages/workHeader";
 import useScrollBackgroundColor from "./hook/useScrollBgColor";
-import ProcessPage from "./components/pages/processPage";
-import TeamPage from "./components/pages/teamPage";
-import ContactPage from "./components/pages/contactPage";
-import ProjectPage from "./components/pages/projectPage";
+import { Home, About, WorkHeader, Work, ProcessAndApproach, GetInTouch, ProjectPage, ProcessPage, TeamPage, ContactPage } from "./pages";
 
 function App() {
   const [showContent, setShowContent] = useState(false);

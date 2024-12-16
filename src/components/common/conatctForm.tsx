@@ -93,7 +93,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <div className="w-full xl:px-20 mx-auto">
-      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6">
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6 px-2 xl:px-0">
         <div className="border-b border-t border-black py-10">
           <h2 className="text-3xl font-bold mb-4">Your contact information</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
@@ -250,7 +250,7 @@ const ContactForm: React.FC = () => {
                   <FaArrowRight className="h-10 font-thin w-10  -rotate-45" />
                 ),
               }}
-              classNames="p-7 shadow-lg"
+              classNames="xl:p-7 p-3 shadow-lg"
             />
           </span>
 

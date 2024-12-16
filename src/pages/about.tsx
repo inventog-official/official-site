@@ -1,8 +1,9 @@
-import Button2 from "../common/button2";
-import { wholePageContent } from "../../utils/pageContent";
-import { useInView } from "react-intersection-observer";
 
-const About = () => {
+import { useInView } from "react-intersection-observer";
+import Button2 from "../components/common/button2";
+import { wholePageContent } from "../utils/pageContent";
+
+export const About = () => {
 
   const { ref, inView } = useInView({
     threshold: 0.3, // Adjust as needed
@@ -37,4 +38,3 @@ const About = () => {
   );
 };
 
-export default About;

@@ -1,12 +1,11 @@
 import { useNavigate } from "react-router-dom";
-import useCounterStore from "../../store/animateScreen";
-import CardList, {
-  Card,
-} from "../Animatecomponets/AnimateCardRightToCenter/main";
-import AnimatedText from "../Animatecomponets/AnimateText/main";
-import SlideUp from "../Animatecomponets/SlideUpTextAnimation/main";
+import CardList, { Card } from "../components/Animatecomponets/AnimateCardRightToCenter/main";
+import AnimatedText from "../components/Animatecomponets/AnimateText/main";
+import SlideUp from "../components/Animatecomponets/SlideUpTextAnimation/main";
+import useCounterStore from "../store/animateScreen";
 
-const ProcessAndApproach = () => {
+
+export const ProcessAndApproach = () => {
 
   const navigate = useNavigate()
   const { setHovered,setActive, setLinkHovered } = useCounterStore();
@@ -98,4 +97,3 @@ const ProcessAndApproach = () => {
   );
 };
 
-export default ProcessAndApproach;

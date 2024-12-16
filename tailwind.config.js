@@ -96,7 +96,7 @@ export default {
   },
   plugins: [],
 }
-//f07518   ORANGE
+//3559E0   ORANGE
 //#1D4ED8  blue 
 //#FBBF24  yellow
 //#9333EA  purple
@@ -104,5 +104,5 @@ export default {
 //#1F2937  dark grey
 //#FFFFFF  white
 
-
+//3559E0
 //rgb(249 115 22 / var(--tw-border-opacity, 1))
