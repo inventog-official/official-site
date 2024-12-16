@@ -1,10 +1,10 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 interface TeamCardProps {
   gender: string;
   role: string;
   color: string; // New prop for color support
-  profileImage: string; // New prop for profile image
+  profileImage: ReactNode; // New prop for profile image
 }
 
 const TeamCard: React.FC<TeamCardProps> = ({
@@ -65,11 +65,12 @@ const TeamCard: React.FC<TeamCardProps> = ({
       </div>
 
       <div className="img w-[80%] p-2 shadow-lg group-hover:animate-floating  aspect-square bg-gray-100 z-40 rounded-md">
-        <img
+        {/* <img
           src={profileImage}
           alt={`${role} profile`}
           className="w-full h-full  object-cover rounded-md"
-        />
+        /> */}
+        {profileImage}
       </div>
 
       {/* Optional contact information */}

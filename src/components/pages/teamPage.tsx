@@ -3,6 +3,7 @@ import AnimatedText from "../Animatecomponets/AnimateText/main";
 import ParallexHorizontalScroll from "../Animatecomponets/ParalexScrollHorizontal/main";
 import SlideUp from "../Animatecomponets/SlideUpTextAnimation/main";
 import TeamCard from "../Animatecomponets/TeamCard/main";
+import {BeSvg, DeVops, FeSvg, PmSvg, QaSvg, UiUxSvg} from "../common/Svg/Team/index";
 import GetInTouch from "./getInTouch";
 
 const TeamPage = () => {
@@ -12,25 +13,25 @@ const TeamPage = () => {
       gender: "male",
       role: "Frontend Developer",
       color: "bg-white", // Custom color
-      profileImage: "/fe.svg", // Replace with actual image URL
+      profileImage: <FeSvg/>, // Replace with actual image URL
     },
     {
       gender: "male",
       role: "Backend Developer",
       color: "bg-white", // Custom color
-      profileImage: "/be.svg", // Replace with actual image URL
+      profileImage: <BeSvg/>, // Replace with actual image URL
     },
     {
       gender: "male",
       role: "UI/UX Designer",
       color: "bg-white", // Custom color
-      profileImage: "/uiux.svg", // Replace with actual image URL
+      profileImage: <UiUxSvg/>, // Replace with actual image URL
     },
     {
       gender: "male",
       role: "DevOps Engineer",
       color: "bg-white", // Custom color
-      profileImage: "/devops.svg", // Replace with actual image URL
+      profileImage: <DeVops/>, // Replace with actual image URL
     },
     // {
     //   gender: "male",
@@ -42,13 +43,13 @@ const TeamPage = () => {
       gender: "male",
       role: "Product Manager",
       color: "bg-white", // Custom color
-      profileImage: "/pm.svg", // Replace with actual image URL
+      profileImage: <PmSvg/>, // Replace with actual image URL
     },
     {
       gender: "male",
       role: "QA Engineer",
       color: "bg-white", // Custom color
-      profileImage: "/qa.svg", // Replace with actual image URL
+      profileImage: <QaSvg/>, // Replace with actual image URL
     },
     // {
     //   gender: "male",
@@ -80,7 +81,7 @@ const TeamPage = () => {
 
       <div className="flex flex-col  xl:flex-row  items-start text-left px-3 xl:px-10 gap-2 h-full xl:h-screen w-full">
         <div className="w-full  h-full p-16  flex justify-center items-center">
-          <img src="/team.png" className="animate-zoomIn" />
+          <img src="/teamImage.png" className="animate-zoomIn" />
         </div>
         <div className="w-full flex justify-center h-full gap-2 flex-col px-8 xl:px-14">
           <button className="border border-black w-full xl:w-[30%] rounded-full px-4 py-2 ">
