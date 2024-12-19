@@ -1,6 +1,6 @@
 
 import AnimatedText from "../components/Animatecomponets/AnimateText/main";
-import ParallexHorizontalScroll from "../components/Animatecomponets/ParalexScrollHorizontal/main";
+import ParallaxHorizontalScroll from "../components/Animatecomponets/ParalexScrollHorizontal/main";
 import SlideUp from "../components/Animatecomponets/SlideUpTextAnimation/main";
 import TeamCard from "../components/Animatecomponets/TeamCard/main";
 import { FeSvg, BeSvg, UiUxSvg, DeVops, PmSvg, QaSvg } from "../components/common/Svg/Team";
@@ -84,16 +84,16 @@ export const TeamPage = () => {
         <div className="w-full  h-full p-16  flex justify-center items-center">
           <img src="https://i.imghippo.com/files/gQX3238Xyg.png" className="animate-zoomIn" />
         </div>
-        <div className="w-full flex justify-center h-full gap-2 flex-col px-8 xl:px-14">
+        <div className="w-full flex justify-center h-full gap-6 flex-col px-8 xl:px-14">
           <button className="border border-black w-full xl:w-[30%] rounded-full px-4 py-2 ">
            {wholePageContent.team.heading}
           </button>
-          <div className="text-left text-lg xl:text-3xl font-bold max-w-lg leading-relaxed">
+          <div className="text-left text-lg xl:text-3xl font-semibold max-w-lg leading-relaxed">
            {wholePageContent.team.description}
           </div>
         </div>
       </div>
-      <ParallexHorizontalScroll>
+      <ParallaxHorizontalScroll  className1={"items-center px-10"}  className2="gap-10 ">
       {teamMembers.map((member, index) => (
         <TeamCard
           key={index}
@@ -103,7 +103,7 @@ export const TeamPage = () => {
           profileImage={member.profileImage}
         />
       ))}
-      </ParallexHorizontalScroll>
+      </ParallaxHorizontalScroll>
       <GetInTouch />
     </div>
   );

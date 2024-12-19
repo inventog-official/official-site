@@ -33,7 +33,7 @@ export const About = () => {
           <Button2 classNames={`${inView ? 'animate-slideIn' : 'w-ful'}  px-12 py-2`} text={wholePageContent.about.buttonText} />
         </div>
       </div>
-      
+    
     </div>
   );
 };

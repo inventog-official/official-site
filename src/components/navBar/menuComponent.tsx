@@ -98,7 +98,7 @@ const MenuComponent:React.FC<{bgColor_:string}> = ({bgColor_}) => {
                 : bgColor,
             }}
             exit={{ width: 0, backgroundColor: "#ffffff" }}
-            transition={{ duration: isExiting ? 0.6 : 0.7 }}
+            transition={{ duration: isExiting ? 0.6 : 0.5 }}
             className={`overflow-hidden ${
               isExiting ? "px-8" : "px-14"
             } hidden xl:flex py-4 gap-12 shadow-lg items-center justify-center whitespace-nowrap rounded-full text-left`}
@@ -111,7 +111,7 @@ const MenuComponent:React.FC<{bgColor_:string}> = ({bgColor_}) => {
                 animate={{ opacity: isExiting ? 0 : 1, y: isExiting ? 10 : 0 }}
                 exit={{ opacity: 0, y: 20 }}
                 transition={{
-                  duration: 0.3,
+                  duration: 0.2,
                   delay: !isExiting ? 1 + index * 0.1 : 0,
                 }}
                 className="font-bold group relative text-black cursor-pointer mb-2"

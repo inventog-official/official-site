@@ -4,10 +4,12 @@ import { motion } from "framer-motion";
 interface ImageCardProps {
   imageUrl: string;
   className?: string;
+  openScreenEnable?:boolean,
   backgroundColor?: string;
   title?: string;
   description?: string;
   category?: string[];
+  onClick?: () => void;
 }
 
 const ImageCard: React.FC<ImageCardProps> = ({
@@ -17,9 +19,11 @@ const ImageCard: React.FC<ImageCardProps> = ({
   title = "Click to Close",
   category = [],
   description,
+  openScreenEnable=true,
+  onClick,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [isAnimateComplete, setAnimateComplete] = useState(false);
+  const [isAnimateComplete, setAnimateComplete] = useState(true);
   const [isOpen, setIsOpen] = useState(true);
   const ref = useRef<HTMLDivElement | null>(null);
   const [isHovered, setIsHovered] = useState(false);
@@ -85,13 +89,14 @@ const ImageCard: React.FC<ImageCardProps> = ({
 
   return (
     <div
+      onClick={() => onClick}
       onMouseEnter={() => setIsHovered(true)} // Set hover state to true on mouse enter
       onMouseLeave={() => setIsHovered(false)} // Set hover state to false on mouse leave
       ref={ref}
-      className={`relative rounded-lg shadow-lg overflow-hidden ${className}`}
+      className={`relative  shadow-lg overflow-hidden ${className}`}
       style={{ backgroundColor: backgroundColor }}
     >
-      {isOpen && (
+      {isOpen&&openScreenEnable && (
         <motion.div
           onAnimationComplete={() => setAnimateComplete(true)}
           initial={{ y: 0 }}
@@ -110,8 +115,7 @@ const ImageCard: React.FC<ImageCardProps> = ({
             backgroundColor: backgroundColor, // Semi-transparent background
           }}
           onClick={handleClose}
-        >
-        </motion.div>
+        ></motion.div>
       )}
       <motion.img
         src={imageUrl}
@@ -131,16 +135,26 @@ const ImageCard: React.FC<ImageCardProps> = ({
         }}
       />
       {isAnimateComplete && (
-        <div className={`absolute  z-10 h-full w-full flex flex-col justify-center items-center ${isHovered?"bg-black/60 transition-all duration-700":""}`}>
+        <div
+          className={`absolute  z-10 h-full w-full flex flex-col justify-center items-center ${
+            isHovered ? "bg-black/60 transition-all duration-700" : ""
+          }`}
+        >
           <motion.span
-            className={`text-[90px] text-white ${showTitle ? "animate-slideIn" : "animate-slideOut"}`}
+            className={`text-[90px] text-white ${
+              showTitle ? "animate-slideIn" : "animate-slideOut"
+            }`}
             initial={{ opacity: 0 }}
             animate={{ opacity: showTitle ? 1 : 0 }}
             transition={{ duration: 1 }}
           >
             {title}
           </motion.span>
-          <div className={`flex justify-between h-44 w-full absolute bottom-0 transition-opacity duration-300 ${isHovered ? "opacity-100" : "opacity-0"}`}>
+          <div
+            className={`flex justify-between h-44 w-full absolute bottom-0 transition-opacity duration-300 ${
+              isHovered ? "opacity-100" : "opacity-0"
+            }`}
+          >
             <motion.div
               className="h-full w-[40%] flex gap-2 justify-center items-center"
               initial={{ opacity: 0 }}
@@ -159,9 +173,7 @@ const ImageCard: React.FC<ImageCardProps> = ({
               animate={{ opacity: showDescription ? 1 : 0 }}
               transition={{ duration: 0.3 }}
             >
-              <span className="w-[90%]">
-              {description}
-              </span>
+              <span className="w-[90%]">{description}</span>
             </motion.div>
           </div>
         </div>

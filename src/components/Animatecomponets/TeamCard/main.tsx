@@ -17,7 +17,7 @@ const TeamCard: React.FC<TeamCardProps> = ({
 
   return (
     <div
-      className={`product-Team w-[300px] hover:shadow-primary/30 group rounded-md shadow-xl overflow-hidden z-[100] relative cursor-pointer snap-start shrink- py-20 px-6 ${
+      className={`product-Team border w-[300px] hover:shadow-primary/30 group rounded-md shadow-xl overflow-hidden z-[100] relative cursor-pointer snap-start shrink- py-20 px-6 ${
         color ? color : isMale ? "bg-primary" : "bg-pink-500"
       } flex flex-col items-center justify-center gap-3 transition-all duration-300 group`}
     >
@@ -41,7 +41,7 @@ const TeamCard: React.FC<TeamCardProps> = ({
           >
             <defs>
               <linearGradient id="blueToGray" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#3559E0" stopOpacity={1} />
+                <stop offset="0%" stopColor="#1D4ED8" stopOpacity={1} />
                 <stop offset="100%" stopColor="#F4EAE6" stopOpacity={1} />
               </linearGradient>
             </defs>

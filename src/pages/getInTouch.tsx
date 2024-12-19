@@ -13,7 +13,7 @@ export const GetInTouch = () => {
   return (
     <div ref={ref} id={"getInTouch"}>
  
-      <div className="xl:h-screen h-[70vh]  bg-primary justify-center items-center flex xl:px-10 px-5 ">
+      <div className="xl:h-screen  lg:h-full py-3 xl:py-0  bg-primary justify-center items-center flex xl:px-10 px-5 ">
         <div className="flex flex-col md:flex-row gap-10  items-center justify-between w-full">
           <div className="text-black w-full px-5 ">
             <h2 className="xl:text-[120px] text-[50px] font-bold">

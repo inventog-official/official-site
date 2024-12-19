@@ -12,6 +12,7 @@
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
     "framer-motion": "^11.12.0",
+    "gsap": "^3.12.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.54.1",
@@ -19,6 +20,7 @@
     "react-intersection-observer": "^9.13.1",
     "react-router-dom": "^7.0.2",
     "react-simple-typewriter": "^5.0.1",
+    "resize-observer-polyfill": "^1.5.1",
     "zod": "^3.24.1",
     "zustand": "^5.0.2"
   },

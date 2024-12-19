@@ -3,6 +3,7 @@ import CardList, { Card } from "../components/Animatecomponets/AnimateCardRightT
 import AnimatedText from "../components/Animatecomponets/AnimateText/main";
 import SlideUp from "../components/Animatecomponets/SlideUpTextAnimation/main";
 import useCounterStore from "../store/animateScreen";
+import { wholePageContent } from "../utils/pageContent";
 
 
 export const ProcessAndApproach = () => {
@@ -23,7 +24,7 @@ export const ProcessAndApproach = () => {
 
       <div className=" flex flex-col w-full p-0 xl:p-10  gap-4 h-full ">
         <CardList>
-          {[1, 2, 3, 4].map((card, index) => (
+          {wholePageContent.process.process.map((card, index) => (
             <Card key={index}>
               {
                 <button
@@ -51,17 +52,14 @@ export const ProcessAndApproach = () => {
                       <span className="flex gap-5  items-center justify-center  ">
                         <span className="xl:text-[100px] text-5xl font-bold">
                           {" "}
-                          {card}.
+                          {index+1}.
                         </span>
-                        <span className="text-5xl text-center">Discover</span>
+                        <span className="xl:text-5xl text-xl  text-start xl:text-center">{card.heading}</span>
                       </span>
                     </div>
                     <div className=" hidden xl:flex items-start w-[70%] space-x-4 ">
                       <p className="text-sm max-w-xs text-left">
-                        At this point we get to know your business, your goals
-                        and your target audience. We conduct research and
-                        analysis to gain insights that will be critical to the
-                        rest of the project.
+                    {card.description}
                       </p>
                     </div>{" "}
                   </span>
