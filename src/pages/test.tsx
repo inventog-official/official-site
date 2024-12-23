@@ -1,4 +1,3 @@
-import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const ScrollAnimation = () => {
@@ -6,21 +5,21 @@ const ScrollAnimation = () => {
   const { scrollYProgress } = useScroll();
 
   // Animations for width, height, and other properties
-  const width = useTransform(scrollYProgress, [0, 0.05, 0.10, 0.15, 1], [
-    "100%",
-    "50%", // Desktop view
-    "30%",  // iPad view
-    "25%",  // Phone view
-    "0%",   // Maintain Phone view
-  ]);
+  // const width = useTransform(scrollYProgress, [0, 0.05, 0.10, 0.15, 1], [
+  //   "100%",
+  //   "50%", // Desktop view
+  //   "30%",  // iPad view
+  //   "25%",  // Phone view
+  //   "0%",   // Maintain Phone view
+  // ]);
 
-  const height = useTransform(scrollYProgress, [0, 0.01, 0.02, 0.03, 1], [
-    "100vh", // Desktop view
-    "50vh", 
-    "50vh", // iPad view
-    "80vh",  // Phone view
-    "100vh", // Maintain Phone view
-  ]);
+  // const height = useTransform(scrollYProgress, [0, 0.01, 0.02, 0.03, 1], [
+  //   "100vh", // Desktop view
+  //   "50vh", 
+  //   "50vh", // iPad view
+  //   "80vh",  // Phone view
+  //   "100vh", // Maintain Phone view
+  // ]);
 
   // Border radius for rounded corners during scroll
   const borderRadius = useTransform(scrollYProgress, [0.66, 1], [

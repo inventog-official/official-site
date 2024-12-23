@@ -3,7 +3,7 @@ import { Canvas, useLoader } from '@react-three/fiber';
 import { useRef } from 'react';
 import { useScroll } from 'framer-motion';
 import { motion } from 'framer-motion-3d';
-import { Mesh, TextureLoader } from 'three';
+import {  TextureLoader } from 'three';
 
 const Earth: React.FC = () => {
     const scene = useRef<HTMLCanvasElement | null>(null);

@@ -15,7 +15,7 @@ interface CardProps {
   style:any
 }
 
-const Card: React.FC<CardProps> = ({ i,style,icon,   className,title, description, src, color, progress, range, targetScale }) => {
+const Card: React.FC<CardProps> = ({ i,style,icon,   className,title, description, color, progress, range, targetScale }) => {
 
   const container = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({

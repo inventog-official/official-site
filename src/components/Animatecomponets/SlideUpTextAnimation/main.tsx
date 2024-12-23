@@ -1,5 +1,5 @@
 import React, { } from 'react';
-import { AnimatePresence, delay, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { SplitText } from './splitText';
 import { useInView } from 'react-intersection-observer';
 
