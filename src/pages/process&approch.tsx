@@ -1,15 +1,15 @@
 import { useNavigate } from "react-router-dom";
-import CardList, { Card } from "../components/Animatecomponets/AnimateCardRightToCenter/main";
+import CardList, {
+  Card,
+} from "../components/Animatecomponets/AnimateCardRightToCenter/main";
 import AnimatedText from "../components/Animatecomponets/AnimateText/main";
 import SlideUp from "../components/Animatecomponets/SlideUpTextAnimation/main";
 import useCounterStore from "../store/animateScreen";
 import { wholePageContent } from "../utils/pageContent";
 
-
 export const ProcessAndApproach = () => {
-
-  const navigate = useNavigate()
-  const { setHovered,setActive, setLinkHovered } = useCounterStore();
+  const navigate = useNavigate();
+  const { setHovered, setActive, setLinkHovered } = useCounterStore();
 
   return (
     <div className="h-full flex flex-col justify-center items-center overflow-hidden   bg-transparent ">
@@ -28,10 +28,9 @@ export const ProcessAndApproach = () => {
             <Card key={index}>
               {
                 <button
-
-                    onClick={() => {
+                  onClick={() => {
                     setActive();
-                      navigate(`/process`);
+                    navigate(`/process`);
                   }}
                   onMouseEnter={() => {
                     setHovered(true);
@@ -52,14 +51,16 @@ export const ProcessAndApproach = () => {
                       <span className="flex gap-5  items-center justify-center  ">
                         <span className="xl:text-[100px] text-5xl font-bold">
                           {" "}
-                          {index+1}.
+                          {index + 1}.
                         </span>
-                        <span className="xl:text-5xl text-xl  text-start xl:text-center">{card.heading}</span>
+                        <span className="xl:text-5xl text-xl  text-start xl:text-center">
+                          {card.heading}
+                        </span>
                       </span>
                     </div>
                     <div className=" hidden xl:flex items-start w-[70%] space-x-4 ">
                       <p className="text-sm max-w-xs text-left">
-                    {card.description}
+                        {card.description}
                       </p>
                     </div>{" "}
                   </span>
@@ -69,29 +70,28 @@ export const ProcessAndApproach = () => {
           ))}
         </CardList>
       </div>
-    <div className="flex flex-col py-10 items-center  px-10 justify-center text-center">
-    <span className="xl:text-[70px] text-white text-[40px] font-[800]   ">
-        <SlideUp text={"For over a"} />
-      </span>
-      
+      <div className="flex flex-col py-10 items-center  px-10 justify-center text-center">
+        <span className="xl:text-[70px] text-white text-[40px] font-[800]   ">
+          <SlideUp delay={0.1} text={"For over a"} />
+        </span>
 
-<span className="flex ">
+        <span className="flex ">
           <AnimatedText
             text="decade"
             className="xl:text-[70px]   justify-start items-start text-[40px] font-[800]   "
           />
         </span>
-      
-      <span className="xl:text-[70px] text-[40px] font-[800] text-white w-full text-center xl:px-32 px-5 ">
 
-        <SlideUp
-          text={"we've been delivering epic user experiences that will amaze  you."}
-        />
-        {/* <SlideUp text={"  you."} /> */}
-      </span>
-    </div>
-   
+        <span className="xl:text-[70px] text-[40px] font-[800] text-white w-full text-center xl:px-32 px-5 ">
+          <SlideUp
+            delay={0.1}
+            text={
+              "we've been delivering epic user experiences that will amaze  you."
+            }
+          />
+          {/* <SlideUp text={"  you."} /> */}
+        </span>
+      </div>
     </div>
   );
 };
-

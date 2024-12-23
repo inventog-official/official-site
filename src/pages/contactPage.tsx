@@ -24,6 +24,7 @@ export const ContactPage = () => {
           />
         </span>
       </div>
+      
       <div className="w-full h-64  flex gap-3 xl:px-16 px-4  ">
         <div className="w-[50%]   h-full flex justify-center items-center">
           <BsArrowDown className="h-28  font-thin w-16 text-black" />

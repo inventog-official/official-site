@@ -1,38 +1,26 @@
-import  { useState, useEffect } from 'react';
+'use client';
+import Lenis from 'lenis';
+import { useEffect, ReactNode } from 'react';
 
-const LaptopComponent = () => {
-  const [isOpen, setIsOpen] = useState(false);
+interface SmoothScrollProps {
+    children: ReactNode;
+}
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const laptopContainer = document.querySelector('.laptop-container');
-      //@ts-ignore
-      if (scrollPosition >= laptopContainer?.offsetTop - window.innerHeight / 2) {
-        setIsOpen(true);
-      } else {
-        setIsOpen(false);
-      }
-    };
+const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
 
-    window.addEventListener('scroll', handleScroll);
+        const lenis = new Lenis();
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+        function raf(time: number) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
 
-  return (
-    <div className="relative w-full h-screen flex justify-center items-center">
-      <div className={`laptop-container ${isOpen ? 'laptop-open' : 'laptop-close'}`}>
-        <div className="laptop">
-          <div className="laptop-screen">
-            <img src="image.jpg" alt="Image on laptop screen" className="w-full h-full object-cover" />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+        requestAnimationFrame(raf);
+    }, []);
+
+    return <>{children}</>;
 };
 
-export default LaptopComponent;
+export default SmoothScroll;

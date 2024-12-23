@@ -18,7 +18,7 @@ const ParallaxHorizontalScroll: React.FC<ParallaxHorizontalScrollProps> = ({
   className1,
   className2,
   childClassName,
-  scaleRange = [0.8, 1], // Default scale range
+  scaleRange = [0.9, 1], // Default scale range
 }) => {
   const targetRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -42,7 +42,7 @@ const ParallaxHorizontalScroll: React.FC<ParallaxHorizontalScrollProps> = ({
           {children.map((child, index) => (
             <motion.div
               key={index}
-              style={index==0?{}:{ scale }}
+              style={{ scale }}
               className={`flex-shrink-0 ${childClassName}`}
             >
               {child}
@@ -51,9 +51,9 @@ const ParallaxHorizontalScroll: React.FC<ParallaxHorizontalScrollProps> = ({
         </motion.div>
       </div>
 
-      <div className="sticky top-0 justify-center items-center py-12 gap-12 md:visible lg:hidden xl:hidden flex flex-col">
+      <div className="sticky   mx-0 top-0 justify-center items-center py-12 gap-12 md:visible lg:hidden xl:hidden flex flex-col">
         {children.map((child, index) => (
-          <div key={index} className="flex-shrink-0 w-screen">
+          <div key={index} className="flex-shrink-0 flex justify-center items-center   w-screen">
             {child}
           </div>
         ))}

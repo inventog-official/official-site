@@ -27,13 +27,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
     <motion.div
       ref={ref}
       key={index}
-      className="rounded-[60px] flex justify-center items-start px-10 xl:gap-16 gap-5 py-3 flex-col shadow-lg w-full h-full bg-black transition-transform transform hover:scale-110 hover:shadow-2xl"
+      className="rounded-[60px] flex justify-center items-start px-10 xl:gap-12 gap-5 py-3 flex-col shadow-lg w-full h-full bg-black transition-transform transform hover:scale-110 hover:shadow-2xl"
       initial={{ opacity: 0, scale: 0.8 }} // Start smaller
       animate={{ opacity: inView ? 1 : 0, scale: inView ? 1 : 0.8 }} // Scale to full size when in view
       transition={{
         duration: 0.3, // Increase duration for smoother effect
         ease: 'easeInOut', // Use a predefined easing function
-        delay: index * 0.1,
+        delay: index * 0.2,
       }}
     >
       <div className='w-full relative bg-gradient-to-r from-white to-gray-100/40 border shadow-lg rounded-3xl xl:h-32 h-24  justify-start items-center px-4 flex '>
@@ -75,7 +75,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
         {/* {service.icon} */}
       </motion.div>
       </div>
-      <p className="text-gray-300 text-xl font-sans">{service.description}</p>
+      <p className="text-gray-300 text-2xl font-sans">{service.description}</p>
     </motion.div>
   );
 };

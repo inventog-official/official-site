@@ -1,7 +1,7 @@
 import useCounterStore from "../../store/animateScreen";
 
 
-const Button3:React.FC<{text:string, classNames?:string; onClick?:() =>void}> = ({text, classNames,onClick}) => {
+const Button3:React.FC<{text:string, bgColor?:string, classNames?:string; onClick?:() =>void}> = ({text, bgColor='bg-primary',classNames,onClick}) => {
   const { setHovered} = useCounterStore();
   return (
     <div>
@@ -16,7 +16,7 @@ const Button3:React.FC<{text:string, classNames?:string; onClick?:() =>void}> = 
             {text}
             </span>
             <svg
-              className="w-17 h-8 justify-end group-hover:rotate-90 group-hover:bg-primary text-black ease-linear duration-300 rounded-full border border-black group-hover:border-none p-2 rotate-45"
+              className={`w-17 h-8 justify-end group-hover:rotate-90 group-hover:${bgColor} text-black ease-linear duration-300 rounded-full border border-black group-hover:border-none p-2 rotate-45`}
               viewBox="0 0 16 19"
               xmlns="http://www.w3.org/2000/svg"
             >

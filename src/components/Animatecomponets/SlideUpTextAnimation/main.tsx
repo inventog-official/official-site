@@ -1,9 +1,9 @@
 import React, { } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, delay, motion } from 'framer-motion';
 import { SplitText } from './splitText';
 import { useInView } from 'react-intersection-observer';
 
-const SlideUp: React.FC<{ text: any ,className?:string}> = ({ text,className }) => {
+const SlideUp: React.FC<{ text: any , delay?:number, duration?:number,className?:string}> = ({ text,delay=0.2,duration=2.5, className }) => {
   const { ref, inView } = useInView({
     threshold: 0.3, // Adjust as needed
     triggerOnce: true, // Only trigger once
@@ -17,7 +17,7 @@ const SlideUp: React.FC<{ text: any ,className?:string}> = ({ text,className }) 
             initial={{ opacity: 0 }} // Start hidden
             animate={{ opacity: 1 }} // Fade in
             exit={{ opacity: 0 }} 
-            transition={{ duration: 2.5}}
+            transition={{ duration}}
           >
             <SplitText
               initial={{ y: '100%' }}
@@ -26,7 +26,7 @@ const SlideUp: React.FC<{ text: any ,className?:string}> = ({ text,className }) 
                 visible: (i: number) => ({
                   y: 0,
                   transition: {
-                    delay: i * 0.2
+                    delay: i * delay
                   }
                 })
               }}

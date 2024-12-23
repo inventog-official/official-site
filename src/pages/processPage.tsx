@@ -18,6 +18,7 @@ export const ProcessPage = () => {
             className="xl:text-[80px]  animate-slideIn  justify-start items-start text-[40px] font-[800] text-white  "
           />
           <SlideUp
+             
             className="xl:text-[80px] text-[40px] font-[800] animate-slideIn text-white   "
             text={"brands "}
           />

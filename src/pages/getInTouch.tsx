@@ -5,7 +5,7 @@ import Button3 from "../components/common/button3";
 import { useInView } from "react-intersection-observer";
 
 
-export const GetInTouch = () => {
+export const GetInTouch = ({bgColor='bg-primary'}:{bgColor?:string}) => {
   const { ref, inView } = useInView({
     threshold: 0.3, // Adjust as needed
     triggerOnce: true, // Only trigger once
@@ -13,7 +13,7 @@ export const GetInTouch = () => {
   return (
     <div ref={ref} id={"getInTouch"}>
  
-      <div className="xl:h-screen  lg:h-full py-3 xl:py-0  bg-primary justify-center items-center flex xl:px-10 px-5 ">
+      <div className={`xl:h-screen  lg:h-full py-3 xl:py-0  ${bgColor} justify-center items-center flex xl:px-10 px-5 `}>
         <div className="flex flex-col md:flex-row gap-10  items-center justify-between w-full">
           <div className="text-black w-full px-5 ">
             <h2 className="xl:text-[120px] text-[50px] font-bold">
@@ -33,13 +33,14 @@ export const GetInTouch = () => {
               />
             </p>
             <Button3
+             bgColor={bgColor}
               classNames={`${inView ? "animate-slideIn" : ""}`}
               text={"contact us"}
             />
           </div>
         </div>
       </div>
-      <div className="bg-primary xl:h-16 h-full w-full flex  flex-col xl:flex-row justify-between items-start xl:items-center px-5 gap-2 py-2 xl:px-16">
+      <div className={`${bgColor} xl:h-16 h-full w-full flex  flex-col xl:flex-row justify-between items-start xl:items-center px-5 gap-2 py-2 xl:px-16`}>
         <div className="flex items-center gap-3">
           <a
             href="#"

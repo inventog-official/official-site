@@ -61,6 +61,12 @@ const WhyInventOG = () => {
               description:
                 "Delivering intuitive and engaging user experiences tailored to your audience.",
             },
+            {
+              icon: <FaUsers className="text-purple-500 h-14 w-14" />,
+              title: "User-Centric Design",
+              description:
+                "Delivering intuitive and engaging user experiences tailored to your audience.",
+            },
           ].map((feature, index) => (
             <motion.li
               key={index}

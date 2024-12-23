@@ -2,6 +2,7 @@
 import { useInView } from "react-intersection-observer";
 import Button2 from "../components/common/button2";
 import { wholePageContent } from "../utils/pageContent";
+import SlideUp from "../components/Animatecomponets/SlideUpTextAnimation/main";
 
 export const About = () => {
 
@@ -27,9 +28,10 @@ export const About = () => {
           <button className={`border border-black rounded-full w-full xl:w-[30%] px-4 py-2 ${inView ? 'animate-slideIn' : ''}`}>
             {wholePageContent.about.heading}
           </button>
-          <p className={`text-lg md:text-xl lg:text-3xl font-serif ${inView ? 'animate-slideIn' : ''}`}>
+          <SlideUp duration={0.09} delay={0.08} className=" text-lg md:text-xl lg:text-3xl font-serif" text={wholePageContent.about.content} />
+          {/* <p className={`text-lg md:text-xl lg:text-3xl font-serif ${inView ? 'animate-slideIn' : ''}`}>
             {wholePageContent.about.content}
-          </p>
+          </p> */}
           <Button2 classNames={`${inView ? 'animate-slideIn' : 'w-ful'}  px-12 py-2`} text={wholePageContent.about.buttonText} />
         </div>
       </div>

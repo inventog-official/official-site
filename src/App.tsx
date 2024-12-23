@@ -19,8 +19,8 @@ import {
   ContactPage,
   OurServicePage,
 } from "./pages";
-import ImageCard from "./components/Animatecomponets/ImageScreenAnimation/main";
-import WhyInventOG from "./components/Animatecomponets/WhyInventOG/main";
+import StickyCards from "./components/Animatecomponets/StickyParallaxCardAnimation/main";
+import GameOnSolution from "./pages/projects/gameOnSolution";
 
 function App() {
   const [showContent, setShowContent] = useState(false);
@@ -30,9 +30,13 @@ function App() {
     { id: "home", color: "bg-white" },
     { id: "about", color: "bg-white" },
     { id: "service", color: "bg-white" },
+    
+    { id: "WhyInventOGBefore", color: "bg-gray-950" },
+    { id: "WhyInventOGAfter", color: "bg-gray-950" },
     { id: "work-header", color: "bg-gray-100" },
     { id: "work", color: "bg-gray-200" },
     { id: "process", color: "bg-gray-950" },
+
   ];
   const nav1 = [
     { id: "home", color: "bg-primary" },
@@ -40,11 +44,17 @@ function App() {
     { id: "work-header", color: "bg-primary" },
     { id: "work", color: "bg-primary" },
     { id: "process", color: "bg-primary" },
+    { id: "WhyInventOGBefore", color: "bg-white" },
+    { id: "WhyInventOGAfter", color: "bg-white" },
     { id: "getInTouch", color: "bg-white" },
+    { id: "gameOnSolution", color: "bg-[#febc12]" },
+
   ];
   const nav2 = [
     { id: "home", color: "bg-transparent" },
     { id: "getInTouch", color: "bg-transparent" },
+    
+
   ];
   const bgColor = useScrollBackgroundColor(sections);
   const navIconBgColor = useScrollBackgroundColor(nav1);
@@ -60,7 +70,7 @@ function App() {
             <>
               <CursorFollower />
               <NavBar bgColor={navBgColor} bgColorForMenu={navIconBgColor} />
-              <div></div>
+
               <Routes>
                 <Route
                   path="/"
@@ -70,9 +80,16 @@ function App() {
                     >
                       <Home />
                       <About />
-                      {/* <Test /> */}
 
-                      <WhyInventOG />
+                      <div className="h-20 text-transparent" id="WhyInventOGBefore">
+                        sssss
+                      </div>
+
+                      <StickyCards />
+                      <div className="h-40 text-transparent" id="WhyInventOGAfter">
+                        sssss
+                      </div>
+                      {/* <WhyInventOG /> */}
                       <div>
                         <div id="work-header">
                           <WorkHeader />
@@ -83,6 +100,7 @@ function App() {
                         <ProcessAndApproach />
                       </div>
                       <OurServicePage />
+
                     </div>
                   }
                 />
@@ -124,26 +142,7 @@ function App() {
                 <Route
                   path="/projects/game-on-solution"
                   element={
-                    <div className=" bg-green-400 h-screen">
-                      <ImageCard
-                        openScreenEnable={false}
-                        description={
-                          "Platform for court bookings at sports facilities"
-                        }
-                        category={[
-                          "DESIGN",
-                          "DEVELOPMENT",
-                          "MOTION",
-                          "STRATEGY",
-                        ]}
-                        className={`h-full w-full cursor-pointer`}
-                        imageUrl={
-                          "https://bbbzdlyncfcnmzxxaubm.supabase.co/storage/v1/object/gms-api/public/banner-img/3f49feb424a78b862cc3.webp"
-                        }
-                        backgroundColor={"#1D4ED8"}
-                        title={"Game On Solution"}
-                      />
-                    </div>
+                  <GameOnSolution/>
                   }
                 />
               </Routes>
