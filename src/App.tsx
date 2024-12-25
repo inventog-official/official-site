@@ -22,8 +22,7 @@ import {
 import StickyCards from "./components/Animatecomponets/StickyParallaxCardAnimation/main";
 import GameOnSolution from "./pages/projects/gameOnSolution";
 import SriViswaCharityTrust from "./pages/projects/sriVisawacharitableTrust";
-import ScrollTestimonials from "./components/Animatecomponets/ScrollTestimonials/main";
-import Testimonials from "./components/Animatecomponets/ScrollTestimonials/main";
+
 
 function App() {
   const [showContent, setShowContent] = useState(false);
@@ -64,8 +63,7 @@ function App() {
   const bgColor = useScrollBackgroundColor(sections);
   const navIconBgColor = useScrollBackgroundColor(nav1);
   const navBgColor = useScrollBackgroundColor(nav2);
-  const row1Cards = ['Card 1', 'Card 2', 'Card 3', 'Card 4','Card 1', 'Card 2', 'Card 3', 'Card 4','Card 1', 'Card 2', 'Card 3', 'Card 4','Card 1', 'Card 2', 'Card 3', 'Card 4'];
-  const row2Cards = ['Card 5', 'Card 6', 'Card 7', 'Card 8','Card 1', 'Card 2', 'Card 3', 'Card 4','Card 1', 'Card 2', 'Card 3', 'Card 4','Card 1', 'Card 2', 'Card 3', 'Card 4'];
+  
   return (
     <Router>
       {active ? (

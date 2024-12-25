@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { useInView } from 'react-intersection-observer';
+// import { useInView } from 'react-intersection-observer';
 import ExpandableContent from "../components/Animatecomponets/ExpandableContent/main";
 import HorizontalScroll from "../components/Animatecomponets/HorizontalScrollAnimation/main";
 import ScrollGapAnimation from "../components/Animatecomponets/ScrollGapAnimation/main";
@@ -28,10 +28,10 @@ export const Work = () => {
 
     setOpenIndex(openIndex === index ? null : index);
   };
-  const { ref, inView } = useInView({
-    threshold: 0.3, // Adjust as needed
-    triggerOnce: true, // Only trigger once
-  });
+  // const { ref, inView } = useInView({
+  //   threshold: 0.3, // Adjust as needed
+  //   triggerOnce: true, // Only trigger once
+  // });
 
   return (
     <div
@@ -113,7 +113,7 @@ export const Work = () => {
         {wholePageContent.work.projects.map((data, index) => {
           return (
             <HorizontalScroll key={index}>
-              <div ref={ref} className={`relative   rounded-2xl flex shadow-lg overflow-hidden w-full h-[56vh] md:h-[45vh] lg:h-[35vh]`}>
+              <div className={`relative   rounded-2xl flex shadow-lg overflow-hidden w-full h-[56vh] md:h-[45vh] lg:h-[35vh]`}>
                 <img
                   src={data.imageUrl}
                   alt="Two people smiling and working on a laptop"

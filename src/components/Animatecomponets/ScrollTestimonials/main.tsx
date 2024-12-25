@@ -2,6 +2,7 @@
 // import { useScroll, useTransform } from "framer-motion";
 // import Card from "./card";
 
+
 // interface ScrollTestimonialsProps {
 //   row1Cards: string[];
 //   row2Cards: string[];
@@ -55,34 +56,34 @@
 // };
 
 // export default ScrollTestimonials;
-import React from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { BsHeart, BsHeartFill } from 'react-icons/bs';
+// import React from 'react';
+// import { motion, useScroll, useTransform } from 'framer-motion';
+import {  BsHeartFill } from 'react-icons/bs';
 
-const testimonials = [
-  {
-    name: "John Doe",
-    text: "This service is fantastic! Highly recommend to everyone.",
-    position: "CEO, Company A"
-  },
-  {
-    name: "Jane Smith",
-    text: "A wonderful experience from start to finish.",
-    position: "Manager, Company B"
-  },
-  {
-    name: "Alice Johnson",
-    text: "I couldn't be happier with the results!",
-    position: "Designer, Company C"
-  }
-];
+// const testimonials = [
+//   {
+//     name: "John Doe",
+//     text: "This service is fantastic! Highly recommend to everyone.",
+//     position: "CEO, Company A"
+//   },
+//   {
+//     name: "Jane Smith",
+//     text: "A wonderful experience from start to finish.",
+//     position: "Manager, Company B"
+//   },
+//   {
+//     name: "Alice Johnson",
+//     text: "I couldn't be happier with the results!",
+//     position: "Designer, Company C"
+//   }
+// ];
 
 const Testimonials = () => {
-  const { scrollY } = useScroll();
+//   const { scrollY } = useScroll();
   
   // Transform the scroll position to control opacity and y position
-  const yTransform = useTransform(scrollY, [0, 300], [100, 0]);
-  const opacityTransform = useTransform(scrollY, [0, 300], [0, 1]);
+//   const yTransform = useTransform(scrollY, [0, 300], [100, 0]);
+//   const opacityTransform = useTransform(scrollY, [0, 300], [0, 1]);
 
   return (
     <div className=" px-24 max-w-full mx-auto">
