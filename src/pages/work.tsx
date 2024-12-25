@@ -7,18 +7,23 @@ import ScrollGapAnimation from "../components/Animatecomponets/ScrollGapAnimatio
 import ScrollImage from "../components/Animatecomponets/ScrollImageAnimation/main";
 import Button2 from "../components/common/button2";
 import { wholePageContent } from "../utils/pageContent";
+import { useNavigate } from "react-router-dom";
 
 export const Work = () => {
   const [imageDetails, setImageDetails] = useState({
     url: wholePageContent.work.projectsData[0].imageUrl,
     text: wholePageContent.work.projectsData[0].initialText,
+    path:wholePageContent.work.projectsData[0].path
   });
+  const navigate = useNavigate()
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const handleToggle = (index: number) => {
     setImageDetails({
       text: wholePageContent.work.projectsData[index].initialText,
       url: wholePageContent.work.projectsData[index].imageUrl,
+      path:wholePageContent.work.projectsData[index].path
+
     });
 
     setOpenIndex(openIndex === index ? null : index);
@@ -36,7 +41,7 @@ export const Work = () => {
       <div className="hidden   xl:flex w-full h-full justify-center pl-28  relative ">
         <div className="w-1/3 h-full  flex">
           <ScrollGapAnimation
-            className="h-[140vh] w-1/3 z-20  absolute  flex flex-col  justify-end items-center "
+            className="h-[120vh] w-1/3 z-20  absolute  flex flex-col  justify-end items-center "
             innerClassName="h-[80%] rounded-xl bg-white shadow-lg border w-[90%]"
           >
             <div className="w-ful h-full flex flex-col gap-8 justify-start items-start p-10">
@@ -73,7 +78,7 @@ export const Work = () => {
           </ScrollGapAnimation>
         </div>
         <ScrollImage
-      
+         onClick={() => navigate(`/projects/${imageDetails.path}`)}
           text={imageDetails.text}
           src={imageDetails.url}
           alt="Custom alt text"
@@ -105,27 +110,29 @@ export const Work = () => {
       </div>
 
       <div className=" xl:hidden lg:flex md:flex flex scroll-container overflow-x-auto w-screen p-4 space-x-4">
-        {wholePageContent.work.projectsData.map((data, index) => {
+        {wholePageContent.work.projects.map((data, index) => {
           return (
             <HorizontalScroll key={index}>
-              <div ref={ref} className={`relative ${inView?"animate-zoomIn":""}  rounded-2xl flex shadow-lg overflow-hidden w-full h-[56vh] md:h-[50vh] lg:h-[40vh]`}>
+              <div ref={ref} className={`relative   rounded-2xl flex shadow-lg overflow-hidden w-full h-[56vh] md:h-[45vh] lg:h-[35vh]`}>
                 <img
-                  src="https://bbbzdlyncfcnmzxxaubm.supabase.co/storage/v1/object/gms-api/public/banner-img/3f49feb424a78b862cc3.webp"
+                  src={data.imageUrl}
                   alt="Two people smiling and working on a laptop"
                   className="w-full h-full object-cover"
                 />
                 <span className="absolute text-white h-full flex flex-col gap-52 justify-between">
                   <span className="flex gap-4 p-7 flex-col justify-start items-start">
-                    <h2 className="text-4xl text-wrap w-[60%] font-bold">{data.initialText}.</h2>
+                    <h2 className="text-4xl text-wrap w-[60%] font-bold">{data.title}.</h2>
                     <p className=" text-wrap text-lg font-semibold w-[60%]">
                       {" "}
                       Digital design & smart production agency
+                      {data.path}
                     </p>
                   </span>
                   <span></span>
                 </span>
                 <span className="flex absolute bottom-6   w-full  left-12 ">
                   <Button2
+                   onClick={() =>{navigate(`/projects/${data.path}`)}}
                     classNames="px-7 py-2 absolute"
                     text={wholePageContent.work.buttonText}
                   />

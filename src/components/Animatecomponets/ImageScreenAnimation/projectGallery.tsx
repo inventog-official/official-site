@@ -18,7 +18,7 @@ interface ProjectGalleryProps {
 }
 
 const ProjectGallery: React.FC<ProjectGalleryProps> = ({ imageData }) => {
-  const { deActive } = useCounterStore();
+  const { deActive,setHovered, setLinkHovered } = useCounterStore();
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const imageRefs = useRef<(HTMLDivElement | null)[]>([]);
   const navigate = useNavigate();
@@ -80,6 +80,15 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ imageData }) => {
     <div className={`h-full hidden xl:flex flex-col w-full gap-10`}>
       {imageData.map((data, index) => (
         <motion.div
+     
+        onMouseEnter={() => {
+          setHovered(true);
+          setLinkHovered(true);
+        }}
+        onMouseLeave={() => {
+          setLinkHovered(false);
+          setHovered(false);
+        }}
           initial={{ padding: "36px" }} // Initial styles
           animate={{
             padding: isPaddingAnimationActive ? "0px" : "36px", // Remove padding on click
@@ -91,12 +100,16 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ imageData }) => {
           }}
           transition={{ duration: 0.6 }} // Duration of the transition
           key={index}
-          onClick={() => handleImageClick(index)}
+          onClick={() =>{
+            console.log(data.path)
+            navigate(data.path)
+              handleImageClick(index)}}
           ref={(el) => (imageRefs.current[index] = el)} // Store reference to each image card
           className="flex h-screen justify-center items-center w-full" // Center the image card
         >
           <ImageCard
-            onClick={() => handleImageClick(index)}
+          
+            // onClick={() => { handleImageClick(index)}}
             key={index}
             description={data.description}
             category={data.category}

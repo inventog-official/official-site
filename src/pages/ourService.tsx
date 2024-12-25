@@ -33,11 +33,11 @@ export const OurServicePage = () => {
       >
         <PixelCursorEffect>
         <div className="relative h-screen w-full text-center flex justify-center items-center">
-          <motion.h2 className="xl:text-[100px] text-2xl absolute font-[600]">
+          <motion.h2 className="xl:text-[100px] text-5xl font-sans absolute font-[600]">
             INVENTOG CREATE
           </motion.h2>
           <motion.h2
-            className="xl:text-[100px] text-2xl absolute font-[600]"
+            className="xl:text-[100px] text-5xl font-sans absolute font-[600]"
             initial={{ opacity: 1, y: -100 }} // Start off-screen
             animate={
               !crossTextAnimation
@@ -49,7 +49,7 @@ export const OurServicePage = () => {
             INVENTOG CREATE
           </motion.h2>
           <motion.h2
-            className="xl:text-[100px] text-2xl absolute font-[600]"
+            className="xl:text-[100px] text-5xl font-sans absolute font-[600]"
             initial={{ opacity: 1, y: 100 }} // Start off-screen
             animate={
               !crossTextAnimation
@@ -63,7 +63,7 @@ export const OurServicePage = () => {
         </div>
         </PixelCursorEffect>
       
-        <div className="flex xl:flex-row relative flex-col xl:h-screen h-full xl:py-20 px-5 xl:px-0 justify-center xl:w-[185%] w-full gap-8">
+        <div className="flex xl:flex-row relative flex-col xl:h-screen h-full xl:py-20 px-10  md:px-20 xl:px-0 justify-center items-center xl:w-[185%] w-full gap-8">
           {wholePageContent.whyInventog.service.map((service, index) => (
             <ServiceCard
               key={index}

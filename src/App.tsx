@@ -21,6 +21,9 @@ import {
 } from "./pages";
 import StickyCards from "./components/Animatecomponets/StickyParallaxCardAnimation/main";
 import GameOnSolution from "./pages/projects/gameOnSolution";
+import SriViswaCharityTrust from "./pages/projects/sriVisawacharitableTrust";
+import ScrollTestimonials from "./components/Animatecomponets/ScrollTestimonials/main";
+import Testimonials from "./components/Animatecomponets/ScrollTestimonials/main";
 
 function App() {
   const [showContent, setShowContent] = useState(false);
@@ -48,6 +51,8 @@ function App() {
     { id: "WhyInventOGAfter", color: "bg-white" },
     { id: "getInTouch", color: "bg-white" },
     { id: "gameOnSolution", color: "bg-[#febc12]" },
+    { id: "SriViswaCharityTrust", color: "bg-[#16a249]" },
+
 
   ];
   const nav2 = [
@@ -59,7 +64,8 @@ function App() {
   const bgColor = useScrollBackgroundColor(sections);
   const navIconBgColor = useScrollBackgroundColor(nav1);
   const navBgColor = useScrollBackgroundColor(nav2);
-
+  const row1Cards = ['Card 1', 'Card 2', 'Card 3', 'Card 4','Card 1', 'Card 2', 'Card 3', 'Card 4','Card 1', 'Card 2', 'Card 3', 'Card 4','Card 1', 'Card 2', 'Card 3', 'Card 4'];
+  const row2Cards = ['Card 5', 'Card 6', 'Card 7', 'Card 8','Card 1', 'Card 2', 'Card 3', 'Card 4','Card 1', 'Card 2', 'Card 3', 'Card 4','Card 1', 'Card 2', 'Card 3', 'Card 4'];
   return (
     <Router>
       {active ? (
@@ -80,14 +86,16 @@ function App() {
                     >
                       <Home />
                       <About />
+                      {/* <Testimonials/> */}
+                      {/* <ScrollTestimonials row1Cards={row1Cards} row2Cards={row2Cards} /> */}
 
-                      <div className="h-20 text-transparent" id="WhyInventOGBefore">
-                        sssss
-                      </div>
+                      <div className="" id="WhyInventOGBefore">
+                        {/* sssss
+                      </div> */}
 
                       <StickyCards />
-                      <div className="h-40 text-transparent" id="WhyInventOGAfter">
-                        sssss
+                      {/* <div className="h-40 text-transparent" id="WhyInventOGAfter">
+                        sssss */}
                       </div>
                       {/* <WhyInventOG /> */}
                       <div>
@@ -137,14 +145,21 @@ function App() {
                       <ContactPage />
                     </div>
                   }
-                />
-
+                />  
+                    //projects
                 <Route
                   path="/projects/game-on-solution"
                   element={
                   <GameOnSolution/>
                   }
                 />
+                  <Route
+                  path="/projects/sri-viswa-charitable-trust"
+                  element={
+                  <SriViswaCharityTrust/>
+                  }
+                />
+                
               </Routes>
             </>
           ) : (

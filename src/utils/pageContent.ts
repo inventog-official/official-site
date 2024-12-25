@@ -46,9 +46,60 @@ export const wholePageContent ={
     work:{
         heading:"Our work",
         buttonText:"See all projects",
+        projects:[
+          {
+            description: "Platform for court bookings at sports facilities",
+            category: ["DESIGN", "DEVELOPMENT", "MOTION", "STRATEGY"],
+            imageUrl:
+              "https://bbbzdlyncfcnmzxxaubm.supabase.co/storage/v1/object/gms-api/public/banner-img/3f49feb424a78b862cc3.webp",
+            backgroundColor: "#1D4ED8",
+            title: "Game On Solution",
+            path:"game-on-solution"
+          },
+          {
+            description: "Platform for court bookings at sports facilities",
+            category: ["DESIGN", "DEVELOPMENT", "MOTION", "STRATEGY"],
+            imageUrl:
+              "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            backgroundColor: "#1D4ED8",
+            title: "Sri Viswa charitable Trust",
+            path: "sri-viswa-charitable-trust",
+          },
+          {
+            description: "Platform for court bookings at sports facilities",
+            category: ["DESIGN", "DEVELOPMENT", "MOTION", "STRATEGY"],
+            imageUrl:
+              "https://bbbzdlyncfcnmzxxaubm.supabase.co/storage/v1/object/gms-api/public/banner-img/3f49feb424a78b862cc3.webp",
+            backgroundColor: "#1D4ED8",
+            title: "Click to Close",
+            path:"game-on-solution"
+      
+          },
+          {
+            description: "Platform for court bookings at sports facilities",
+            category: ["DESIGN", "DEVELOPMENT", "MOTION", "STRATEGY"],
+            imageUrl:
+              "https://bbbzdlyncfcnmzxxaubm.supabase.co/storage/v1/object/gms-api/public/banner-img/3f49feb424a78b862cc3.webp",
+            backgroundColor: "#1D4ED8",
+            title: "Click to Close",
+            path:"game-on-solution"
+      
+          },
+          {
+            description: "Platform for court bookings at sports facilities",
+            category: ["DESIGN", "DEVELOPMENT", "MOTION", "STRATEGY"],
+            imageUrl:
+              "https://bbbzdlyncfcnmzxxaubm.supabase.co/storage/v1/object/gms-api/public/banner-img/3f49feb424a78b862cc3.webp",
+            backgroundColor: "#1D4ED8",
+            title: "Click to Close",
+            path:"game-on-solution"
+      
+          },
+        ],
         projectsData:[
             {
-              initialText: "GAMEONSOLUTION",
+              initialText: "Game On Solution",
+              path:"game-on-solution",
               originalContent: {
                 content:
                   "Our passion lies in working closely with our partners and customers to develop valuable digital products tailored to their needs.",
@@ -58,14 +109,15 @@ export const wholePageContent ={
               imageUrl:"https://bbbzdlyncfcnmzxxaubm.supabase.co/storage/v1/object/gms-api/public/banner-img/3f49feb424a78b862cc3.webp"
             },
             {
-              initialText: "Inventog",
+              initialText: "Sri Viswa Trust",
+              path: "sri-viswa-charitable-trust",
               originalContent: {
                 content:
                   "Our passion lies in working closely with our partners and customers to develop valuable digital products tailored to their needs.",
                 keys: ["Design", "development", "motion"],
               },
               position: "bottom",
-              imageUrl:"https://bbbzdlyncfcnmzxxaubm.supabase.co/storage/v1/object/gms-api/public/banner-img/22758297e9d1ec488133.webp"
+              imageUrl:"https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 
             },
             {
@@ -79,17 +131,17 @@ export const wholePageContent ={
               imageUrl:"https://bbbzdlyncfcnmzxxaubm.supabase.co/storage/v1/object/gms-api/public/banner-img/c49680eb8d540db9ac42.webp"
 
             },
-            {
-              initialText: "Creative Solutions",
-              originalContent: {
-                content:
-                  "Our passion lies in working closely with our partners and customers to develop valuable digital products tailored to their needs.",
-                keys: ["Design", "development", "motion"],
-              },
-              position: "top",
-              imageUrl:"https://bbbzdlyncfcnmzxxaubm.supabase.co/storage/v1/object/gms-api/public/banner-img/78fa3486059a82d67731.webp"
+            // {
+            //   initialText: "Creative Solutions",
+            //   originalContent: {
+            //     content:
+            //       "Our passion lies in working closely with our partners and customers to develop valuable digital products tailored to their needs.",
+            //     keys: ["Design", "development", "motion"],
+            //   },
+            //   position: "top",
+            //   imageUrl:"https://bbbzdlyncfcnmzxxaubm.supabase.co/storage/v1/object/gms-api/public/banner-img/78fa3486059a82d67731.webp"
 
-            },
+            // },
           ]
     },
     process:{

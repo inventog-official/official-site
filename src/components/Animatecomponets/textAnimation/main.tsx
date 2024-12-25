@@ -39,7 +39,7 @@ const TextAnimation = ({texts}:{texts:string[]}) => {
                     animate={{ opacity: isExiting ? 0 : 1 }} // Fade out when exiting
                     exit={{ opacity: 0 }} // Exit animation
                     transition={{ duration: 1 }}
-                    className={`md:text-[90px] text-5xl  font-bold overflow-hidden ${texts[currentTextIndex]===""?'px-10':"px-3"}`}  // Duration of the text animation
+                    className={`md:text-[90px] text-5xl font-sans  font-bold overflow-hidden ${texts[currentTextIndex]===""?'px-10':"px-3"}`}  // Duration of the text animation
                 >
                     {texts[currentTextIndex]} {/* Show text */}
                 </motion.span>

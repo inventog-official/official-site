@@ -15,7 +15,7 @@ export const GetInTouch = ({bgColor='bg-primary'}:{bgColor?:string}) => {
  
       <div className={`xl:h-screen  lg:h-full py-3 xl:py-0  ${bgColor} justify-center items-center flex xl:px-10 px-5 `}>
         <div className="flex flex-col md:flex-row gap-10  items-center justify-between w-full">
-          <div className="text-black w-full px-5 ">
+          <div className="text-white font-poppins w-full px-5 ">
             <h2 className="xl:text-[120px] text-[50px] font-bold">
               {<SlideUp text="Get" />}
             </h2>
@@ -24,8 +24,8 @@ export const GetInTouch = ({bgColor='bg-primary'}:{bgColor?:string}) => {
               {<SlideUp text="in touch" />}
             </h2>
           </div>
-          <div className="gap-28  xl:gap-16 xl:w-[60%] w-[100%] px-5 flex flex-col h-full  justify-start items-start  text-black">
-            <p className="text-2xl text-wrap font-semibold h-10">
+          <div className="gap-28  xl:gap-16 xl:w-[60%] w-[100%] px-5 flex flex-col h-full  justify-start items-start  text-white">
+            <p className="text-2xl text-wrap font-display font-semibold h-10">
               <SlideUp
                 text={
                   "Provide us with project information and reach out to our team."
@@ -34,7 +34,7 @@ export const GetInTouch = ({bgColor='bg-primary'}:{bgColor?:string}) => {
             </p>
             <Button3
              bgColor={bgColor}
-              classNames={`${inView ? "animate-slideIn" : ""}`}
+              classNames={`border-white ${inView ? "animate-slideIn" : ""}`}
               text={"contact us"}
             />
           </div>

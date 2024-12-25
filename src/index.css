@@ -1,7 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap');
 
+body {
+  @apply font-sans text-body font-normal leading-normal ;
+}
+
+h1 {
+  @apply font-sans text-header font-bold leading-tight ;
+}
+
+h2 {
+  @apply font-sans text-secondHeader font-medium leading-normal ;
+}
+
+p {
+  @apply font-sans text-body font-normal leading-relaxed ;
+}
 @layer utilities {
     .clip-50 {
         clip-path: circle(50% at 50% 50%);

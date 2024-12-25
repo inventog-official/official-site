@@ -2,10 +2,36 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+
     extend: {
       fontFamily: {
-        "cabin-condensed": ["'Cabin Condensed'", "sans-serif"],
+        sans: ['Roboto', 'Arial', 'sans-serif'],          // Global body text
+        serif: ['Playfair Display', 'Georgia', 'serif'], // Headers
+        mono: ['Fira Code', 'monospace'],               // Code blocks
       },
+      fontSize: {
+        header: '2.5rem',       // Main headers
+        secondHeader: '1.75rem', // Subheaders
+        body: '1rem',           // Normal body text
+        small: '0.875rem',      // Small text
+      },
+      fontWeight: {
+        light: 300,
+        normal: 400,
+        medium: 500,
+        bold: 700,
+      },
+      lineHeight: {
+        tight: '1.2',
+        normal: '1.5',
+        relaxed: '1.75',
+      },
+      letterSpacing: {
+        tight: '-0.05em',
+        normal: '0em',
+        wide: '0.05em',
+      },
+    
       animation: {
         ballmove: "ballmove 3s infinite alternate",
         textreveal: "textreveal 2.9s infinite alternate",

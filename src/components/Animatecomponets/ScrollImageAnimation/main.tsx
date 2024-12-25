@@ -37,7 +37,8 @@ interface ScrollImageConfig {
 interface ScrollImageProps {
   src: string;
   alt?: string;
-  text?:string
+  text?:string;
+  onClick?:() =>void;
   className?: string;
   containerClassName?: string;
   config?: ScrollImageConfig;
@@ -72,6 +73,7 @@ const ScrollImage: React.FC<ScrollImageProps> = ({
   containerClassName = "",
   text="",
   config = {},
+  onClick
 }) => {
   // Merge default and provided configurations
   const [isHovered, setIsHovered] = useState(false);
@@ -158,6 +160,7 @@ const ScrollImage: React.FC<ScrollImageProps> = ({
         overflow-hidden 
         ${containerClassName}
       `}
+      onClick={onClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

@@ -14,7 +14,7 @@ const HorizontalScroll: React.FC<HorizontalScrollProps> = ({  children ,key}) =>
     
         <motion.div
           key={key}
-          className="min-w-[300px] min-h-[90%] rounded-lg bg-gray-200 flex items-center justify-center"
+          className="min-w-[300px] min-h-[90%] rounded-lg  flex items-center justify-center"
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: 100 }}
