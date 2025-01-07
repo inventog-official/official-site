@@ -51,7 +51,7 @@ export const ProcessAndApproach = () => {
                       <span className="flex gap-5  items-center justify-center  ">
                         <span className="xl:text-[100px] text-5xl font-bold">
                           {" "}
-                          {index + 1}.
+                          {index + 1}
                         </span>
                         <span className="xl:text-5xl text-xl  text-start xl:text-center">
                           {card.heading}
@@ -59,7 +59,7 @@ export const ProcessAndApproach = () => {
                       </span>
                     </div>
                     <div className=" hidden xl:flex items-start w-[70%] space-x-4 ">
-                      <p className="text-sm max-w-xs text-left">
+                      <p className="text-xl max-w-xs text-left">
                         {card.description}
                       </p>
                     </div>{" "}

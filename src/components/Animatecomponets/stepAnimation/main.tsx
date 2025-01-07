@@ -8,6 +8,7 @@ interface StepProgressAnimationProps {
   firstContent: string; // Background color for the first div
   secondContent: string; // Background color for the second div
   lineEnable?: boolean;
+  title:string
 }
 
 const StepProgressAnimation: React.FC<StepProgressAnimationProps> = ({
@@ -15,6 +16,7 @@ const StepProgressAnimation: React.FC<StepProgressAnimationProps> = ({
   firstContent,
   secondContent,
   lineEnable = true,
+  title
 }) => {
   const { ref, inView } = useInView({
     threshold: 0.5, // Trigger when 50% of the element is visible
@@ -60,7 +62,7 @@ const StepProgressAnimation: React.FC<StepProgressAnimationProps> = ({
       </span>
       <div className="w-full md:w-[80%] flex flex-col gap-2 md:flex-row">
         <div className="w-full md:w-[70%] text-white text-left flex flex-col gap-4 md:gap-10 justify-start p-4 md:p-20">
-          <p className="text-3xl md:text-5xl">Discover</p>
+          <p className="text-3xl md:text-5xl">{title}</p>
           <span>{firstContent}</span>
         </div>
         <div className="w-full md:w-[30%] p-4 md:p-20 text-white">

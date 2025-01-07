@@ -45,7 +45,7 @@ const CircularProgress: React.FC<CircularProgressProps> = ({ progress,text }) =>
         fontSize="60"
         fill="#ffff"
       >
-        {text}.
+        {text}
       </text>
     </svg>
   );

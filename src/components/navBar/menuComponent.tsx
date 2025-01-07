@@ -33,7 +33,7 @@ const MenuComponent:React.FC<{bgColor_:string}> = ({bgColor_}) => {
     };
   }, [isExpanded]);
 
-  const menuOptions = ["Projects", "Process", "Team", "Contact"];
+  const menuOptions = ["Home","Projects", "Process", "Team", "Contact"];
 
   useEffect(() => {
     if (isExpanded) {
@@ -53,7 +53,7 @@ const MenuComponent:React.FC<{bgColor_:string}> = ({bgColor_}) => {
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: "-100%", opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="fixed top-0 left-0 w-64  md:hidden h-full bg-white shadow-lg z-50 flex-col items-start p-4"
+            className="fixed top-0 left-0 w-full  md:hidden h-full bg-primary shadow-lg z-50 flex-col justify-center items-center  p-4"
           >
             <button
               onClick={() => {
@@ -63,12 +63,16 @@ const MenuComponent:React.FC<{bgColor_:string}> = ({bgColor_}) => {
                   setIsExiting(false);
                 }, 500);
               }}
-              className="w-full justify-end flex text-primary rounded"
+              className="w-full justify-end flex text-white rounded"
             >
-              <MdClose className="h-7 w-7" />
+              <MdClose className="h-10 w-10" />
             </button>
             {menuOptions.map((option, index) => (
               <motion.div
+              onClick={() => {
+                setActive();
+                  navigate(`/${option.toLowerCase()}`);
+              }} 
                 key={option}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -77,13 +81,10 @@ const MenuComponent:React.FC<{bgColor_:string}> = ({bgColor_}) => {
                   duration: 1,
                   delay: index * 0.1,
                 }}
-                className="font-bold text-black cursor-pointer mb-4 text-lg relative group"
+                className="font-bold  flex flex-col items-center justify-center  py-4   text-white hover:text-black cursor-pointer mb-10 text-2xl relative group"
               >
-                <span    onClick={() => {
-                    setActive();
-                      navigate(`/${option.toLowerCase()}`);
-                  }} className="relative z-10 ">{option}</span>
-                <span className="absolute left-0 bottom-1 h-3 rounded-full z-0 w-0 bg-primary transition-all duration-300 ease-in-out origin-left group-hover:w-[40%]" />
+                <span   className="relative z-10 ">{option}</span>
+                <span className="absolute left-0  h-full rounded-full z-0 w-0 bg-white transition-all duration-300 ease-in-out origin-left group-hover:w-[100%]" />
               </motion.div>
             ))}
           </motion.div>
@@ -119,7 +120,7 @@ const MenuComponent:React.FC<{bgColor_:string}> = ({bgColor_}) => {
                 <span
                   onClick={() => {
                     setActive();
-                      navigate(`/${option.toLowerCase()}`);
+                    option=="Home"?navigate('/'):navigate(`/${option.toLowerCase()}`);
                   }}
                   className="relative z-10"
                 >

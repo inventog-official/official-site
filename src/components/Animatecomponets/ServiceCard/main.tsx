@@ -71,7 +71,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
     </div>
    </div>
 
-    <div className='h-[70%] bg-primary/30 rounded-xl  p-3'>
+    <div className='h-[70%] bg-primary/30 rounded-xl  p-3 overflow-y-auto'>
     <h2 className="text-gray-300 text-lg md:text-3xl lg:text-3xl xl:text-3xl font-sans">
       {service.description}
     </h2>

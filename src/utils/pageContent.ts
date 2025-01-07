@@ -45,7 +45,7 @@ export const wholePageContent ={
 
     work:{
         heading:"Our work",
-        buttonText:"See all projects",
+        buttonText:"See details",
         projects:[
           {
             description: "Platform for court bookings at sports facilities",
@@ -62,7 +62,7 @@ export const wholePageContent ={
             imageUrl:
               "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             backgroundColor: "#1D4ED8",
-            title: "Sri Viswa charitable Trust",
+            title: "Sri Viswa  Trust",
             path: "sri-viswa-charitable-trust",
           },
           {

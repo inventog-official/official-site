@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FaHeartbeat, FaShoppingCart, FaGraduationCap, FaHome, FaFilm } from 'react-icons/fa';
+// import { FaHeartbeat, FaShoppingCart, FaGraduationCap, FaHome, FaFilm } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
 
 const IndustryWeServe = () => {
@@ -9,16 +9,16 @@ const IndustryWeServe = () => {
       });
     
   return (
-    <div className="xl:h-full   w-full flex flex-col gap-10 px-3  py-14">
+    <div className="xl:h-full   w-full flex justify-center items-center flex-col gap-10 px-3  py-14">
         <motion.h2
-          className="text-5xl font-bold text-center mt-10"
+          className="text-5xl xl:text-[80px] font-bold text-start mt-10"
           initial={{ opacity: 0, y: -20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
           transition={{ duration: 0.5 }}
         >
           Industries We Serve
         </motion.h2>
-        <p className="text-center text-xl font-semibold mt-4 text-black ">
+        <p className="text-center text-2xl text-wrap xl:w-[70%] font-semibold mt-4 text-black ">
           From startups to enterprises, InventOG has experience working across
           various industries, including:
         </p>
@@ -28,23 +28,28 @@ const IndustryWeServe = () => {
         >
           {[
             {
-              icon: <FaHeartbeat className="text-white h-24 w-24" />,
+              // icon: <FaHeartbeat className="text-white h-24 w-24" />,
+              icon:'/healthcare.png',
               title: "Healthcare",
             },
             {
-              icon: <FaShoppingCart className="text-white h-24 w-24" />,
+              // icon: <FaShoppingCart className="text-white h-24 w-24" />,
+              icon:'/e-commerce.png',
               title: "E-Commerce",
             },
             {
-              icon: <FaGraduationCap className="text-white h-24 w-24" />,
+              // icon: <FaGraduationCap className="text-white h-24 w-24" />,
+              icon:'/education.png',
               title: "Education",
             },
             {
-              icon: <FaHome className="text-white h-24 w-24" />,
+              // icon: <FaHome className="text-white h-24 w-24" />,
+              icon:'/realestate.png',
               title: "Real Estate",
             },
             {
-              icon: <FaFilm className="text-white h-24 w-24" />,
+              // icon: <FaFilm className="text-white h-24 w-24" />,
+              icon:'/media.png',
               title: "Entertainment",
             },
           ].map((item, index) => (
@@ -55,10 +60,11 @@ const IndustryWeServe = () => {
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
             >
-              <div className="bg-gradient-to-r from-primary to-blue-300 p-2 rounded-full mb-2">
-                {item.icon}
+              <div className="border p-2 w-[80%] shadow-xl rounded-xl bg-primary/10 border-primary/20 mb-2">
+                {/* {item.icon} */}
+                <img src={item.icon} className='h-full w-full'/>
               </div>
-              <h3 className="bg-gradient-to-r from-primary to-blue-300 bg-clip-text text-transparent text-2xl font-bold">
+              <h3 className=" text-2xl font-bold">
                 {item.title}
               </h3>
             </motion.li>

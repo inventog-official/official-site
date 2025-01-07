@@ -124,7 +124,7 @@ export const Work = () => {
                     <h2 className="text-4xl text-wrap w-[60%] font-bold">{data.title}.</h2>
                     <p className=" text-wrap text-lg font-semibold w-[60%]">
                       {" "}
-                      Digital design & smart production agency
+                      Digital design & smart production 
                       {data.path}
                     </p>
                   </span>

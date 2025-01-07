@@ -121,9 +121,9 @@ const GameOnSolution = () => {
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : { opacity: 0 }}
               transition={{ duration: 2 }}
-              className="flex w-[20%] justify-center items-center"
+              className="flex w-[20%] animate-floating  justify-center items-center"
             >
-              <BsArrowDown className="h-28  font-thin w-16 text-white" />
+              <BsArrowDown className="h-28   font-thin w-16 text-white" />
             </motion.div>
             <div className="h-full hidden  w-[40%] text-4xl text-white text-center xl:flex justify-center items-center">
               <span className="w-[90%]">

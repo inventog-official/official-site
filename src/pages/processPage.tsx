@@ -1,6 +1,7 @@
 import AnimatedText from "../components/Animatecomponets/AnimateText/main";
 import SlideUp from "../components/Animatecomponets/SlideUpTextAnimation/main";
 import StepProgressAnimation from "../components/Animatecomponets/stepAnimation/main";
+import { wholePageContent } from "../utils/pageContent";
 
 
 export const ProcessPage = () => {
@@ -30,7 +31,20 @@ export const ProcessPage = () => {
         />
       </div>
       <div className="w-full flex flex-col justify-center items-center">
-        <StepProgressAnimation
+
+        {wholePageContent.process.process.map((data,i) =>{
+          return(<StepProgressAnimation
+            stepNumber={i+1}
+            title={data.heading}
+            lineEnable={i!=wholePageContent.process.process.length-1}
+            firstContent={
+data.description            }
+            secondContent={
+              "Defining project goals and objectives onducting research and analysis Establishing user personas and scenarios Content strategy and planning Defining technica"
+            }
+          />)
+        })}
+        {/* <StepProgressAnimation
           stepNumber={1}
           firstContent={
             "In the discovery phase, we gather information about your business, your goals, and your target audience. We conduct research to learn more about your industry, your competition, and your unique value proposition. We also work with you to determine your goals for the project, such as increasing leads, improving user experience, or driving online sales. By getting to know your business and target audience intimately, we can develop a strategy that meets your needs and delivers results."
@@ -66,7 +80,7 @@ export const ProcessPage = () => {
           secondContent={
             "Defining project goals and objectives onducting research and analysis Establishing user personas and scenarios Content strategy and planning Defining technica"
           }
-        />
+        /> */}
       </div>
     </div>
   );
